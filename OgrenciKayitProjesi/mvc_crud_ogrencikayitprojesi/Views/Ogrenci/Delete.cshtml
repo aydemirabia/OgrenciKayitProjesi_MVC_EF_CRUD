@@ -1,0 +1,63 @@
+﻿@model mvc_crud_ogrencikayitprojesi.Models.Table
+
+@{
+    ViewBag.Title = "Öğrenci Silme Sayfası - MVC CRUD Entity Framework || Öğrenci Kayıt Sayfası";
+}
+
+<h3>Sil</h3>
+
+<h4>Lütfen Dikkat! Silme işlemini gerçekleştirdikten sonra geriye dönemezsiniz!</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrFotograf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrFotograf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrAdres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrAdres)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Öğrenci Listesi", "Index")
+        </div>
+    }
+</div>
